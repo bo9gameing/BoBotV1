@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "../include/botest.h"
 
 
@@ -24,12 +23,17 @@ int main(int argc, char const *argv[])
 
 int startCall()
 {
+    char name[] = "bobot";
+    char greater[] = "hay";
     printf("TESTING SYSTEMS\n");
-    int pass = test(1,2);
-    if(pass == 3){
-        return 0;
+
+
+
+    int passGreter = isItBoBotTest(greater,name);
+    if(passGreter == 0){
+        printf("Test Pass\n");
     }else{
-        return 5;
+        return 1;
     }
-    
+    return 0;
 }
