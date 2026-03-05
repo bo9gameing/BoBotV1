@@ -11,9 +11,9 @@
 
 
 //call functions 
-int startCall();
+int systemTest();
 int actvateBoBot();
-
+int mainLoop();
 
 
 //program wide vars
@@ -27,13 +27,16 @@ int main(int argc, char const *argv[])
     //enter main loop for the code
 
     // comit test
-    testCallPorF = startCall();
+    testCallPorF = systemTest();
     if(testCallPorF == 0){
         printf("all tests pass\n");
     }else{
         return testCallPorF;
     }
-    actvateBoBot();
+    
+    if(int startreading = actvateBoBot() == 4);{
+        mainLoop();
+    }
     return 0;
 }
 
@@ -42,7 +45,7 @@ int main(int argc, char const *argv[])
 //json file fore example
 
 
-int startCall()
+int systemTest()
 {
     char name[] = "bobot";
     char greater[] = "hay";
@@ -59,7 +62,17 @@ int startCall()
     return 0;
 }
 
-
+int mainLoop(){
+    int dontClose = 0;
+    int closeProgram = 0;
+    while(dontClose == 0){
+        printf("hello world !!!\n");
+        closeProgram++;
+        if(closeProgram == 15){
+            dontClose = 1;
+        }
+    }
+}
 
 
 /*
@@ -70,10 +83,15 @@ int startCall()
 */
 int actvateBoBot(){
     char name[5];
+    char caller[4];
+    scanf("%s", &caller);
+    char idc = getchar();
     scanf("%s", &name);
-    int passBoBot = isItBoBot("hay",name);
+    
+    int passBoBot = isItBoBot(caller,name);
     if(passBoBot == 0){
-        printf("Hello user\n");
+        printf("Hello user, what do you need?\n");
         return 4;
     }
+    return 1;
 }
